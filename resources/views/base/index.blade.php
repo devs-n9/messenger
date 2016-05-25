@@ -1,5 +1,9 @@
 @extends('layout')
 
 @section('content')
-<h2>Index Page</h2>
+<ul>
+    @foreach($city as $c)
+    <li>{{ $c->name }}</li>
+    @endforeach
+</ul>
 @endsection
