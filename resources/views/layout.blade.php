@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Base Application</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css">
 </head>
 <body>
     <h1>Layout</h1>
     <div class="container">
         @yield('content')
     </div>
+    
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/particles.js/particles.js"></script>
 </body>
 </html>
