@@ -15,3 +15,7 @@ Route::get('/', 'BaseController@index');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+// Message Api
+
+// /api/friends/user/35
