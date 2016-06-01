@@ -6,3 +6,5 @@ Homestead.json
 .env
 /nbproject/
 /.idea/
+/messenger/nbproject/private
+/messenge/nbproject/private
