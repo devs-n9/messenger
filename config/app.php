@@ -156,15 +156,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-<<<<<<< HEAD
-        /*
+
          * DebugBar
-         */
+         
         
         Barryvdh\Debugbar\ServiceProvider::class,
-=======
- 
->>>>>>> aee4ea8a4415359bb7ac44ac5a6e2fe98903fe21
     ],
 
     /*
