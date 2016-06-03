@@ -15,3 +15,7 @@ Route::get('/', 'BaseController@index');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+
+// API INTERESTS
+Route::get('/api/interests/get', 'Api\InterestsController@get');
