@@ -5,6 +5,7 @@
     <title>Base Application</title>
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body ng-app="messenger">
     <div class="container">
