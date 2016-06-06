@@ -1,3 +1,3 @@
-var messnger = angular.module('messenger', [
+var messenger = angular.module('messenger', [
     'ngRoute'
 ]);

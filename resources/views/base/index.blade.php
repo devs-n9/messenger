@@ -1,9 +1,7 @@
 @extends('layout')
 
 @section('content')
-<<<<<<< HEAD
-    
-=======
+
 <div id="particles-js">
         <div class="col-md-8"></div>
         <div class="col-md-4 login-box">
@@ -58,5 +56,4 @@
             </form>
         </div>
 </div>
->>>>>>> 3723e0e81097768aa7a235cb0ce66a2797ca4788
 @endsection

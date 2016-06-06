@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
     <head>
@@ -45,9 +43,7 @@
         </div>
     </body>
 </html>
-=======
-=======
->>>>>>> 3723e0e81097768aa7a235cb0ce66a2797ca4788
+
 @extends('layouts.app')
 
 @section('content')
@@ -65,7 +61,5 @@
     </div>
 </div>
 @endsection
-<<<<<<< HEAD
->>>>>>> 09637c10a9d8867abeb361818c0d8c94c46e391f
-=======
->>>>>>> 3723e0e81097768aa7a235cb0ce66a2797ca4788
+
+
