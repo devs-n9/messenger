@@ -11,9 +11,11 @@ class BaseController extends Controller
 {
     public function index()
     {
-        $city = Region::find(2)->city;
-        return view('base.index', [
-            'city' => $city
-        ]);
+        return view('base.index');
+    }
+
+    public function main()
+    {
+        return view('base.main');
     }
 }
