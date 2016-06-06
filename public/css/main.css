@@ -1,0 +1,39 @@
+@font-face {
+    font-family: dx; /* Имя шрифта */
+    src: url(../fonts/dx.woff2); /* Путь к файлу со шрифтом */
+}
+
+body {
+    background-color: cadetblue;
+}
+
+.login-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Form elements style */
+.msg-input {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    background-color: rgba( 255, 255, 255, 0.3)
+}
+
+.msg-btn {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+
+.login-box {
+    padding-top: 100px;
+}
+
+.login-box label {
+    font-family: dx;
+    
+}
