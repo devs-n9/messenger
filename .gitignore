@@ -6,13 +6,4 @@ Homestead.json
 .env
 /nbproject/
 /.idea/
-<<<<<<< HEAD
-<<<<<<< HEAD
 /public/bower_components/
-=======
-/messenger/nbproject/private
-/messenge/nbproject/private
->>>>>>> aee4ea8a4415359bb7ac44ac5a6e2fe98903fe21
-=======
-/public/bower_components/
->>>>>>> de8f0ee31de216c29e4a9fce9df7d66b4499a449
