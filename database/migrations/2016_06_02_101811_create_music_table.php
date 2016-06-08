@@ -14,11 +14,7 @@ class CreateMusicTable extends Migration
     {
         Schema::create('event_music', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('artist');
-            $table->string('album');
             $table->string('song');
-            $table->mediumText('year');
-            $table->mediumText('genre');
         });
     }
 

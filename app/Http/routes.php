@@ -19,3 +19,8 @@ Route::get('/home', 'HomeController@index');
 
 // API INTERESTS
 Route::get('/api/interests/get', 'Api\InterestsController@get');
+
+
+
+//API MUSIC
+Route::get('/api/music/get', 'Api\MusicController@get');
