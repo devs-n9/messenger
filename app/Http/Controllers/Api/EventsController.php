@@ -14,5 +14,9 @@ use App\Models\EventPhotos;
 
 class EventsController extends Controller
 {
-    //
+    
+    public function get(){
+        
+        
+    }
 }

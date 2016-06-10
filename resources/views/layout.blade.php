@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/layout.css">
 </head>
 <body ng-app="messenger">
+        
         <div class="container">
             <div id="particles-js">
                 @yield('content')
@@ -21,6 +22,8 @@
     <script src="/bower_components/angular-route/angular-route.js"></script>
     <script src="/js/angular/app.js"></script>
     <script src="/js/angular/direcive.js"></script>
+    <script src="/js/angular/controllers/index.js"></script>
+    <script src="/js/angular/controllers/interests.js"></script>
     <script src="/bower_components/particles.js/particles.js"></script>
     <script src="/js/messenger/init.js"></script>
 
