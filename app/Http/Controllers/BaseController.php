@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use Session;
 use App\Region;
 use App\City;
 use App\Http\Requests;
@@ -14,8 +14,8 @@ class BaseController extends Controller
         return view('base.index');
     }
 
-    public function main()
+    public function profile()
     {
-        return view('base.main');
+        return view('profile.sidebar');
     }
 }

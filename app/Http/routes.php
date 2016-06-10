@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'BaseController@index');
-Route::get('/main', 'BaseController@main');
+Route::get('/profile', 'BaseController@profile');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
