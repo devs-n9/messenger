@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'BaseController@index');
+Route::get('/profile', 'BaseController@profile');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
@@ -19,3 +20,5 @@ Route::get('/home', 'HomeController@index');
 
 // API INTERESTS
 Route::get('/api/interests/get', 'Api\InterestsController@get');
+
+// API EVENTS
