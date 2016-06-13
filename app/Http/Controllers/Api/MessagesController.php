@@ -2,14 +2,29 @@
 
 namespace App\Http\Controllers\Api;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
+//use models
+use App\Models\Messages;
 
 class MessagesController extends Controller
 {
-    /**
+    public function get()
+    {
+        $messages = Messages::all();
+        return view('messages',['messages'=> $messages]);
+    }
+    
+    public function postCreateMessage(Request $request)
+    {
+        $message = new Messages();
+        $message->text = $request['text'];
+        $message->save();
+    }
+  
+   /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

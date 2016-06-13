@@ -16,6 +16,14 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-// Message Api
 
-// /api/friends/user/35
+// API INTERESTS
+Route::get('/api/interests/get', 'Api\InterestsController@get');
+
+// API MESSAGE
+Route::get('/api/messages/get', 'Api\MessagesController@get');
+
+Route::post('/api/messages/create', [
+        'uses' => 'Api\MessagesController@postCreateMessage', 
+        'as' => 'message.create'
+        ]);
