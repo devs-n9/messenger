@@ -23,3 +23,4 @@ Route::get('/api/interests/get', 'Api\InterestsController@get');
 
 //API FRIENDS
 Route::get('/api/friends/get', 'Api\FriendsController@get');
+Route::get('/api/friends/{id}', 'Api\FriendsController@getFriends');
