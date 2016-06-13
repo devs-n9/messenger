@@ -1,0 +1,7 @@
+<div ng-controller="InterestsController">
+    <ul class="nav nav-sidebar">
+        <li ng-repeat="item in list | orderBy:'name' | filter:search">
+            <a href="#"><img class="fr-avatar" src="/images/no-photo.jpg"> [[ item.name ]] </a>
+        </li>
+    </ul>
+</div>

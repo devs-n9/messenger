@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'BaseController@index');
+Route::get('/profile', 'BaseController@profile');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
@@ -27,3 +28,5 @@ Route::post('/api/messages/create', [
         'uses' => 'Api\MessagesController@postCreateMessage', 
         'as' => 'message.create'
         ]);
+
+// API EVENTS
