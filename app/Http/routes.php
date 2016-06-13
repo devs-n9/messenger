@@ -12,7 +12,6 @@
 */
 
 Route::get('/', 'BaseController@index');
-Route::get('/profile', 'BaseController@profile');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
@@ -22,11 +21,18 @@ Route::get('/home', 'HomeController@index');
 Route::get('/api/interests/get', 'Api\InterestsController@get');
 
 // API MESSAGE
-Route::get('/api/messages/get', 'Api\MessagesController@get');
+//Route::get('/api/messages/get', 'Api\MessagesController@get');
+Route::get('/api/messages/get', [
+        'uses' => 'Api\MessagesController@get', 
+        'as' => 'get'
+        ]);
 
 Route::post('/api/messages/create', [
         'uses' => 'Api\MessagesController@postCreateMessage', 
         'as' => 'message.create'
         ]);
 
-// API EVENTS
+Route::get('/api/messages/delete/{messages_id}', [
+        'uses' => 'Api\MessagesController@getDeleteMessage', 
+        'as' => 'message.delete'
+        ]);

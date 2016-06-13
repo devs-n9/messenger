@@ -13,16 +13,25 @@ class MessagesController extends Controller
 {
     public function get()
     {
-        $messages = Messages::all();
-        return view('messages',['messages'=> $messages]);
+        $messages=Messages::all();
+        return view('messages',['messages'=>$messages]);
     }
     
     public function postCreateMessage(Request $request)
     {
-        $message = new Messages();
-        $message->text = $request['text'];
-        $message->save();
+        $messages = new Messages;
+        $messages->text = $request['text'];
+        $messages->save();
+        return redirect()->route('get');
     }
+    
+    public function getDeleteMessage($messages_id)
+    {
+        $messages = Messages::where('id', $messages_id)->first();
+        $messages->delete();
+        return redirect()->route('get');
+    }
+    
   
    /**
      * Display a listing of the resource.
