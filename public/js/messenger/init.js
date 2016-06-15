@@ -103,3 +103,19 @@ particlesJS("particles-js", {
     },
     "retina_detect": true
 });
+
+var socket = io.connect('http://127.0.0.1:3000');
+
+$('.btn-msg').click(function(){
+    var msg = $('.msg-input').val();
+    var user = $('.msg-input').data('name');
+    socket.emit('message', {
+        user: user,
+        msg: msg
+    });
+    $('.msg-input').val('');
+});
+
+socket.on('chat', function(msg){
+    $('.message-box-messages > ul').append($('<li>').text(msg.user + ': ' + msg.msg));
+});
