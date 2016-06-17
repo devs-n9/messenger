@@ -1,15 +1,12 @@
 <?php
 
 namespace App\Http\Controllers\Api;
-
-<<<<<<< HEAD
 use Illuminate\Http\Request;
 use App\Http\Requests;
-
 use App\Http\Controllers\Controller;
 
 //use models
-use App\Interests;
+use App\Model\Interests;
 
 class InterestsController extends Controller
 {
