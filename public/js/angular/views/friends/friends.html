@@ -1,0 +1,7 @@
+<div ng-controller="FriendsController">
+    <ul class="nav nav-sidebar">
+        <li ng-repeat="item in list | orderBy:'friend_id' | filter:search">
+            <a href="#"><img class="fr-avatar" src="/images/no-photo.jpg"> [[ item.friend_id ]] Friends since [[ item.created_at]] </a>
+        </li>
+    </ul>
+</div>

@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'BaseController@index');
+Route::get('/profile', 'BaseController@profile');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
@@ -21,6 +22,10 @@ Route::get('/home', 'HomeController@index');
 // API INTERESTS
 Route::get('/api/interests/get', 'Api\InterestsController@get');
 
+
 //API FRIENDS
 Route::get('/api/friends/get', 'Api\FriendsController@get');
 Route::get('/api/friends/{id}', 'Api\FriendsController@getFriends');
+
+// API EVENTS
+

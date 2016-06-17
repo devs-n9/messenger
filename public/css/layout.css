@@ -1,0 +1,113 @@
+.sidebar {
+    position: absolute;
+    width: 260px;
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    display: block;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 1000;
+}
+
+#logo {
+    height: 40px;
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FCE4EC;
+    text-blink: auto;
+    padding-left: 30px;
+/*    margin-bottom: 3px;*/
+    border-radius: 5px;
+}
+.avatar {
+/*    margin-top: 5px;*/
+}
+
+#avatar {
+    height: 200px;
+    width: auto;
+}
+
+.middle-content {
+    background-color: #E0E0E0;
+}
+
+.navigation {
+    background-color: #9E9E9E;
+    height: 30px;
+    padding: 5px 10px;
+/*
+    margin-bottom: 7px;
+    margin-top: 5px;
+*/
+}
+
+.navigation > div > a:hover {
+    text-decoration: none;
+    color: #E91E63;
+}
+
+.navigation > div > a:after {
+    text-decoration: none;
+    color: #E91E63;
+}
+
+.fa {
+    font-size: 15px;
+    color: #FCE4EC;
+}
+
+.form-control {
+    box-shadow: none;
+}
+
+.search {
+    padding: 0 6px;
+}
+
+.search >div > input {
+    border-radius: 0px;
+    border: none;
+}
+
+
+.nav-sidebar {
+    margin-right: 7px; /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: 7px;
+    margin-top: 7px;
+}
+
+
+.nav-sidebar > li > a {
+    display: block;
+    padding: 0 20px;
+    width: 100%;
+    height: 60px;
+    font-size: 15px;
+    color: #424242;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    margin-bottom: 6px;
+    max-width: 300px;
+    min-height: 20px;
+    position: relative;
+    z-index: 0;
+
+}
+
+.fr-avatar {
+    margin-top: 0px;
+    padding-bottom: 1px;
+    height: 60px;
+    width: 60px;
+    margin-left: -20px;
+}
+
+
+
