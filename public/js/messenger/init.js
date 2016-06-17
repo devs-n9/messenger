@@ -107,6 +107,7 @@ particlesJS("particles-js", {
 var socket = io.connect('http://127.0.0.1:3000');
 
 $('.btn-msg').click(function(){
+    var friend = $('.message-box-header').data('name');
     var msg = $('.msg-input').val();
     var user = $('.msg-input').data('name');
     socket.emit('message', {

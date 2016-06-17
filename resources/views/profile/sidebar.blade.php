@@ -43,7 +43,7 @@
         </div>
     </div>
     <div class="col-md-9 message-box">
-        <div class="message-box-header">
+        <div class="message-box-header" data-id="" data-name="">
 
         </div>
         <div class="container-fluid">

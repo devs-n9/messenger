@@ -14,7 +14,7 @@
 Route::get('/', 'BaseController@index');
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/profile', 'BaseController@profile');
 
 
 // API INTERESTS
