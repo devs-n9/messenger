@@ -1,27 +1,21 @@
 <?php
-
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Auth;
 use App\Region;
 use App\City;
 use App\Http\Requests;
-
 class BaseController extends Controller
 {
     public function index()
     {
-
-        $city = Region::find(2)->city;
-        return view('base.index', [
-            'city' => $city
-        ]);
-
+        if(Auth::check()){
+            return redirect('/profile');
+        }
         return view('base.index');
     }
-
     public function profile()
     {
         return view('profile.sidebar');
-
     }
 }
