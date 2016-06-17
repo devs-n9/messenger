@@ -9,22 +9,24 @@ use Auth;
 //use models
 use App\Models\Friends;
 use App\User;
+use PhpParser\Node\Expr\New_;
 
 class FriendsController extends Controller
 {
-    protected $friends;
-    private $id;
+    //private $id;
     
-    public function get()
-    {   
-        $this->id = Auth::user()->id;
-        $friends = Friends::where('user_id', '=', $this->id)->get();
-        return response()->json($friends);
-    }
+//    public function get()
+//    {
+//        $this->id = Auth::user()->id;
+//        $friends = Friends::where('user_id', '=', $this->id)->get();
+//        return response()->json($friends);
+//    }
 
-    public function request()
+    public function getFriends()
     {
-        
+        $friends = new Friends();
+        $result = $friends->getFriends();
+        return response()->json($result);
     }
     /**
      * @param id $

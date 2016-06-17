@@ -1,7 +1,15 @@
 <div ng-controller="FriendsController">
     <ul class="nav nav-sidebar">
-        <li ng-repeat="item in list | orderBy:'friend_id' | filter:search">
-            <a href="#"><img class="fr-avatar" src="/images/no-photo.jpg"> [[ item.friend_id ]] Friends since [[ item.created_at]] </a>
+        <li ng-repeat="item in list | orderBy:'name' | filter:search">
+            <div class="row friend-row ">
+                <div class="col-md-10"><img class="fr-avatar" src="/images/no-photo.jpg"> [[ item.name ]]
+
+                </div>
+                <div class="col-md-2 friend-buttons ">
+                    <a class ="icon-letter fa fa-envelope-o" ng-click="msg(item.id)" aria-hidden="true"></a>
+                    <a class ="icon-delete fa fa-times" ng-click="del(item.id)" aria-hidden="true"></a>
+                </div>
+            </div>
         </li>
     </ul>
 </div>
