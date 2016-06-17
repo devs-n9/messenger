@@ -1,6 +1,10 @@
 @extends('layout')
 
 @section('content')
+
+
+<div id="particles-js">
+
         <div class="col-md-9"></div>
         <div class="col-md-3 login-box">
             <form role="form msg-form" method="POST" action="{{ url('/login') }}">

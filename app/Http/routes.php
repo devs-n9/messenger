@@ -36,3 +36,10 @@ Route::get('/api/messages/delete/{messages_id}', [
         'uses' => 'Api\MessagesController@getDeleteMessage', 
         'as' => 'message.delete'
         ]);
+
+//API FRIENDS
+Route::get('/api/friends/get', 'Api\FriendsController@get');
+//Route::get('/api/friends/{id}', 'Api\FriendsController@getFriends');
+Route::get('/api/friends/getfriends', 'Api\FriendsController@getFriends');
+
+// API EVENTS
