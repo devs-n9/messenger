@@ -140,5 +140,44 @@
     margin-left: -20px;
 }
 
+.friend-row, .well{
+    height: 60px;
+    padding:0;
+    border:none;
+    margin-right:10px;
+    margin-bottom:5px;
+}
 
+.friend-row{
+
+    margin-left:5px;
+    margin-right:11px;
+
+}
+.friend-buttons > button ,.well > button {
+    background-color: #9E9E9E;
+    padding-left:0px;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+.friend-buttons > button > a , .well > button > a{
+    text-align: center;
+    font-size: 24px;
+    width: 30px;
+    height: 28px;
+}
+
+.friend-row > div > button > a:hover , .well > div > button > a:hover {
+    text-decoration: none;
+    color: #E91E63;
+    border-top: 1px solid #E91E63;
+    border-bottom: 1px solid #E91E63;
+    z-index: 1000;
+}
+
+.friend-row > div > button > .icon-send:hover , .well > div > button > a:hover {
+    color: #008800;
+}
 

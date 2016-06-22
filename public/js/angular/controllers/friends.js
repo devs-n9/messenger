@@ -6,9 +6,15 @@ messenger.controller('FriendsController', function($scope, $http) {
 
     $scope.msg = function(msg){
         console.log("Send message to user: "+msg);
-    }
+    };
 
     $scope.del = function(delId){
         console.log("delete user: "+delId);
-    }
+        $http.get("/api/friends/delfriend/"+delId).success(function(data){
+           console.log(data);
+        });
+    };
+
+    $scope.isCollapsed = false;
+
 });

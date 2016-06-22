@@ -28,6 +28,12 @@ class FriendsController extends Controller
         $result = $friends->getFriends();
         return response()->json($result);
     }
+    public function deleteFriend($id)
+    {
+        $friends = new Friends();
+        $result = $friends->delFriend($id);
+        return response()->json($result);
+    }
     /**
      * @param id $
      * @return \Illuminate\Http\JsonResponse
