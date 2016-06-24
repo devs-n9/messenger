@@ -22,3 +22,4 @@ Route::get('/home', 'HomeController@index');
 Route::get('/api/interests/get', 'Api\InterestsController@get');
 
 // API EVENTS
+Route::get('/api/events/get', 'Api\EventsController@get');

@@ -24,6 +24,7 @@
     <script src="/js/angular/direcive.js"></script>
     <script src="/js/angular/controllers/index.js"></script>
     <script src="/js/angular/controllers/interests.js"></script>
+    <script src="/js/angular/controllers/events.js"></script>
     <script src="/bower_components/particles.js/particles.js"></script>
     <script src="http://127.0.0.1:3000/socket.io/socket.io.js"></script>
     <script src="/js/messenger/init.js"></script>
