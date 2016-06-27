@@ -26,6 +26,7 @@
     "url": "https://github.com/devs-n9/messenger/issues"
   },
   "dependencies": {
-    "socket.io": "~1.4.6"
+    "socket.io": "~1.4.6",
+    "mongoose": "~4.5.1"
   }
 }

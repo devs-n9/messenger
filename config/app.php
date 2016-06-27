@@ -163,6 +163,12 @@ return [
          */
         
         Barryvdh\Debugbar\ServiceProvider::class,
+        
+        /*
+         * Mongodb
+         */
+        
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
     ],
 
     /*
