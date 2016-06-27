@@ -149,7 +149,6 @@
 }
 
 .friend-row{
-
     margin-left:5px;
     margin-right:11px;
 
@@ -160,6 +159,7 @@
     width: 30px;
     height: 30px;
     border: none;
+    outline: none;
 }
 
 .friend-buttons > button > a , .well > button > a{
@@ -172,12 +172,9 @@
 .friend-row > div > button > a:hover , .well > div > button > a:hover {
     text-decoration: none;
     color: #E91E63;
-    border-top: 1px solid #E91E63;
-    border-bottom: 1px solid #E91E63;
     z-index: 1000;
 }
 
-.friend-row > div > button > .icon-send:hover , .well > div > button > a:hover {
+.friend-row > div > button > .icon-send:hover , .well > div > button > .icon-send:hover {
     color: #008800;
 }
-

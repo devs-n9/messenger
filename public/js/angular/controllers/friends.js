@@ -15,6 +15,6 @@ messenger.controller('FriendsController', function($scope, $http) {
         });
     };
 
-    $scope.isCollapsed = false;
+    
 
 });

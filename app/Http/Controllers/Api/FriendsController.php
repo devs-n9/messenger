@@ -13,15 +13,6 @@ use PhpParser\Node\Expr\New_;
 
 class FriendsController extends Controller
 {
-    //private $id;
-    
-//    public function get()
-//    {
-//        $this->id = Auth::user()->id;
-//        $friends = Friends::where('user_id', '=', $this->id)->get();
-//        return response()->json($friends);
-//    }
-
     public function getFriends()
     {
         $friends = new Friends();
@@ -32,7 +23,7 @@ class FriendsController extends Controller
     {
         $friends = new Friends();
         $result = $friends->delFriend($id);
-        return response()->json($result);
+        //return response()->json($result);
     }
     /**
      * @param id $

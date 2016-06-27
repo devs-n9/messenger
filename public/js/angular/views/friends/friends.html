@@ -7,23 +7,23 @@
                 </div>
                 <div class="col-md-2 friend-buttons">
                     <button type="button">
-                        <a class ="icon-send fa fa-envelope-o " ng-click="msg(item.id)" aria-hidden="true"></a>
+                        <a class ="icon-send fa fa-envelope-o " ng-click="msg(item.friend_id)" aria-hidden="true"></a>
                     </button>
-                    <button type="button" data-toggle="collapse" data-target="#collapseExample[[item.id]]" aria-expanded="false" aria-controls="collapseExample">
+                    <button type="button" data-toggle="collapse" data-target="#collapseExample[[item.friend_id]]" aria-expanded="false" aria-controls="collapseExample">
                         <a class ="icon-delete fa fa-times" aria-hidden="true"></a>
                     </button>
                 </div>
             </div>
-            <div class="collapse" id="collapseExample[[item.id]]">
+            <div class="collapse" id="collapseExample[[item.friend_id]]">
                     <div class="well">
                         <div class="col-md-10">
-                            <p> Удалить из друзей : [[ item.name ]] ?</p>
+                            <p> Удалить из друзей [[ item.name ]] ?</p>
                         </div>
                         <div class="col-md-2 friend-buttons">
-                            <button type="button" data-toggle="collapse" data-target="#collapseExample[[item.id]]" aria-expanded="false" aria-controls="collapseExamp               le">
-                                <a class ="icon-send fa fa-check" ng-click="del(item.id)" aria-hidden="true"></a>
+                            <button type="button" data-toggle="collapse" data-target="#collapseExample[[item.friend_id]]" aria-expanded="false" aria-controls="collapseExample">
+                                <a class ="icon-send fa fa-check" ng-click="del(item.friend_id)" aria-hidden="true"></a>
                             </button>
-                            <button type="button" data-toggle="collapse" data-target="#collapseExample[[item.id]]" aria-expanded="false" aria-controls="collapseExample">
+                            <button type="button" data-toggle="collapse" data-target="#collapseExample[[item.friend_id]]" aria-expanded="false" aria-controls="collapseExample">
                                 <a class ="icon-delete fa fa-times" aria-hidden="true"></a>
                             </button>
                         </div>
