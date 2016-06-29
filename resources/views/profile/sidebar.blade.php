@@ -1,8 +1,8 @@
 @extends('layout')
 
 @section('content')
-<div class="row profile-block">
-    <div class="sidebar col-md-3" ng-controller="IndexController">
+<div class="row profile-block" ng-controller="IndexController">
+    <div class="sidebar col-md-3" >
         <div class="row" id="logo">Joinup</div>
         <div class="row avatar">
             <div class="col-md-12">
@@ -48,7 +48,9 @@
         </div>
         <div class="container-fluid">
             <div class="row message-box-messages">
-                <ul></ul>
+                <ul>
+                    <li ng-repeat="msg in msgs">[[ msg.name ]] : [[ msg.msg ]]</li>
+                </ul>
             </div>
             <form class="row message-box-form form-horizontal">
                 <div class="col-md-11">

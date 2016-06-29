@@ -23,12 +23,15 @@
 }
 
 .message-box-messages {
-    height: 520px;
+    height: 510px;
     padding: 30px;
+    margin-bottom: 10px;
+    overflow-y: scroll;
 }
 
 .message-box-messages > ul {
     list-style-type: none;
+    
 }
 
 .message-box {

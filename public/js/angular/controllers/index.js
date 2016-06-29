@@ -1,5 +1,8 @@
 messenger.controller('IndexController', function($scope, $http) {
 
+    $http.get('/api/messages/get').success(function(msgs){
+        $scope.msgs = msgs;
+    });
 });
 
 messenger.config(['$routeProvider',
