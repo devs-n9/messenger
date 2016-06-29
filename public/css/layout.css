@@ -27,6 +27,8 @@
     padding: 30px;
     margin-bottom: 10px;
     overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: normal;
 }
 
 .message-box-messages > ul {
