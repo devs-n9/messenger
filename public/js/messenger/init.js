@@ -104,7 +104,6 @@ particlesJS("particles-js", {
     "retina_detect": true
 });
 
-$(".message-box-messages").animate({ scrollTop: 9999999999 }, "slow");
 var socket = io.connect(location.origin + ':3000');
 
 $('.btn-msg').click(function(){
@@ -119,4 +118,5 @@ $('.btn-msg').click(function(){
 
 socket.on('chat', function(msg){
     $('.message-box-messages > ul').append($('<li>').text(msg.user + ': ' + msg.msg));
+    $(".message-box-messages").animate({ scrollTop: 9999999999 }, "slow");
 });
