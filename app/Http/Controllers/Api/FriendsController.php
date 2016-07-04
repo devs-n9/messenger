@@ -20,10 +20,10 @@ class FriendsController extends Controller
         return response()->json($result);
     }
     
-    public function getUsers($search)
+    public function getUsers()
     {
         $users = new Friends();
-        $result = $users->getUsers($search);
+        $result = $users->getUsers();
         return response()->json($result);
     }
     

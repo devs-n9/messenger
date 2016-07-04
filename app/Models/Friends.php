@@ -47,7 +47,7 @@ class Friends extends Model
     /**
      * @show all users who not in friendlist
      */
-    public function getUsers($search)
+    public function getUsers()
     {  
         $this->userId = Auth::user()->id;
         $users = DB::select("SELECT pp.name, pp.user_id FROM profile pp LEFT JOIN 
@@ -55,8 +55,8 @@ class Friends extends Model
         ON p.user_id = f.user_id
         WHERE f.friend_id = ?) as j
         ON j.uid = pp.user_id
-        WHERE pp.user_id != ? AND j.name IS NULL
-        AND pp.name LIKE '%?%'", [$this->userId, $this->userId, $search]);
+        WHERE pp.user_id != ? AND j.name IS NULL", [$this->userId, $this->userId]);
+        //AND pp.name LIKE '%?%'
         return $users;
     }
     /**

@@ -7,11 +7,11 @@ messenger.controller('FriendsController', function($scope, $http) {
         console.log("Send message to user: "+msg);
     };
 
-    $scope.searchUser = function(search){
-        $http.get("/api/friends/getusers/"+search).success(function(data){
+    //$scope.searchUser = function(search){
+    $http.get("/api/friends/getusers/").success(function(data){
             $scope.usersList = data;
         });
-    };
+    // };
     
     $scope.del = function(delId){
         $http.get("/api/friends/delfriend/"+delId);
