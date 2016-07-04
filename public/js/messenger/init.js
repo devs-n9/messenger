@@ -105,7 +105,7 @@ particlesJS("particles-js", {
 });
 
 var socket = io.connect(location.origin + ':3000');
-
+$(".message-box-messages").animate({ scrollTop: 9999999999 }, "slow");
 $('.btn-msg').click(function(){
     var msg = $('.msg-input').val();
     var user = $('.msg-input').data('name');
@@ -117,6 +117,6 @@ $('.btn-msg').click(function(){
 });
 
 socket.on('chat', function(msg){
-    $('.message-box-messages > ul').append($('<li>').text(msg.user + ': ' + msg.msg));
+    $('.message-box-messages > ul').append($('<li><span>' + msg.user + '</span> ').text(msg.msg));
     $(".message-box-messages").animate({ scrollTop: 9999999999 }, "slow");
 });

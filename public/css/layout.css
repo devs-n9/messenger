@@ -59,13 +59,19 @@
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 5px;
 }
-.avatar {
-/*    margin-top: 5px;*/
+.avatar .uploader-image {
+    display: none;
+}
+
+.message-box-messages li > span{
+    font-weight: 900;
+    color: white;
 }
 
 #avatar {
-    height: 200px;
-    width: auto;
+    height: 260px;
+    width: 260px;
+    cursor: pointer;
 }
 
 .middle-content {

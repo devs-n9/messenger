@@ -5,8 +5,13 @@
     <div class="sidebar col-md-3" >
         <div class="row" id="logo">Joinup</div>
         <div class="row avatar">
+            <input type="file" class="uploader-image" fileupload>
             <div class="col-md-12">
-                <img id="avatar" src="/images/no-photo.jpg">
+                @if(!empty($profile->avatar))
+                <img id="avatar" src="/img/upload/{{ $profile->avatar }}" ng-click="uploadimage()">
+                @else
+                <img id="avatar" src="/images/no-photo.jpg" ng-click="uploadimage()">
+                @endif
             </div>
         </div>
         <div class="middle-content">
@@ -30,11 +35,6 @@
                     <a href="#/settings" class="fa fa-cogs" aria-hidden="true"></a>
                 </div>
             </div>
-            <div class="row search">
-                <div class="col-md-12">
-                    <input type="text" class="form-control" id="search" ng-model="search.name" placeholder="Search">
-                </div>
-            </div>
             <div class="row">
                 <div class="col-md-12" ng-view="">
 
@@ -49,7 +49,7 @@
         <div class="container-fluid">
             <div class="row message-box-messages">
                 <ul>
-                    <li ng-repeat="msg in msgs">[[ msg.name ]] : [[ msg.msg ]]</li>
+                    <li ng-repeat="msg in msgs"><span>[[ msg.name ]]</span>: [[ msg.msg ]]</li>
                 </ul>
             </div>
             <form class="row message-box-form form-horizontal">
@@ -64,5 +64,21 @@
         </div>
 
     </div>
+    <!--MODAL-->
+    <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="img-container img-preview">
+                        <img id="image">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" ng-click="saveimg()">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 @endsection

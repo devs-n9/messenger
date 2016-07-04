@@ -25,3 +25,6 @@ Route::get('/api/interests/get', 'Api\InterestsController@get');
 
 // API MESSAGES
 Route::get('/api/messages/get', 'Api\MessagesController@get');
+
+// API SETTINGS
+Route::patch('/api/settings/avatar', 'Api\SettingsController@avatar');

@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
-use App\Region;
-use App\City;
+use App\Models\Profile;
 use App\Http\Requests;
 
 class BaseController extends Controller
@@ -19,6 +18,9 @@ class BaseController extends Controller
 
     public function profile()
     {
-        return view('profile.sidebar');
+        $profile = Profile::where('user_id', '=', Auth::user()->id)->first();
+        return view('profile.sidebar', [
+            'profile' => $profile
+        ]);
     }
 }
