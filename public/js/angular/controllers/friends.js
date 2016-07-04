@@ -1,6 +1,5 @@
 messenger.controller('FriendsController', function($scope, $http) {
     $http.get("/api/friends/getfriends").success(function(data){
-        console.log(data);
         $scope.list = data;
     });
 
@@ -8,13 +7,14 @@ messenger.controller('FriendsController', function($scope, $http) {
         console.log("Send message to user: "+msg);
     };
 
-    $scope.del = function(delId){
-        console.log("delete user: "+delId);
-        $http.get("/api/friends/delfriend/"+delId).success(function(data){
-           console.log(data);
+    $scope.searchUser = function(search){
+        $http.get("/api/friends/getusers/"+search).success(function(data){
+            $scope.usersList = data;
         });
     };
-
     
-
+    $scope.del = function(delId){
+        $http.get("/api/friends/delfriend/"+delId);
+    };
+    
 });

@@ -178,3 +178,9 @@
 .friend-row > div > button > .icon-send:hover , .well > div > button > .icon-send:hover {
     color: #008800;
 }
+
+.users-list {
+    background-color: rgba(188, 214, 216, 1);
+    margin:0;
+    padding: 10px 15px 0px 15px;
+}

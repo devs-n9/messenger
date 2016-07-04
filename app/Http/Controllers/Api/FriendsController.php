@@ -19,14 +19,37 @@ class FriendsController extends Controller
         $result = $friends->getFriends();
         return response()->json($result);
     }
+    
+    public function getUsers($search)
+    {
+        $users = new Friends();
+        $result = $users->getUsers($search);
+        return response()->json($result);
+    }
+    
+    public function getInvites()
+    {
+        $invites = new Friends();
+        $result = $invites->getInvites();
+        return response()->json($result);
+    }
+    
+    public function sendRequest($id)
+    {
+        $friends = new Friends();
+        $result = $friends->sendRequest($id);
+    }
+    
+    public function inviteFriend($id)
+    {
+        $friends = new Friends();
+        $result = $friends->inviteFriend($id);
+    }
+    
     public function deleteFriend($id)
     {
         $friends = new Friends();
         $result = $friends->delFriend($id);
-        //return response()->json($result);
     }
-    /**
-     * @param id $
-     * @return \Illuminate\Http\JsonResponse
-     */
+    
 }

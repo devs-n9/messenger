@@ -7,10 +7,10 @@ messenger.config(['$routeProvider',
         $routeProvider.
         when('/', {
             templateUrl: '/js/angular/views/friends/friends.html'
+        }).when('/users', {
+            templateUrl: '/js/angular/views/friends/users.html'
         }).when('/gallery', {
             templateUrl: '/js/angular/views/gallery/gallery.html'
-        }).when('/friends', {
-            templateUrl: '/js/angular/views/friends/friends.html'
         }).when('/music', {
             templateUrl: '/js/angular/views/music/music.html'
         }).when('/interests', {

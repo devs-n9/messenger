@@ -30,11 +30,6 @@
                         <a href="#/settings" class="fa fa-cogs" aria-hidden="true"></a>
                     </div>
                 </div>
-                <div class="row search">
-                    <div class="col-md-12">
-                        <input type="text" class="form-control" id="search" ng-model="search.name" placeholder="Search">
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-md-12" ng-view="">
 
@@ -57,7 +52,6 @@
                     <div class="col-md-1">
                         <button class="btn btn-success btn-msg">send</button>
                     </div>
-
                 </form>
             </div>
 
