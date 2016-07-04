@@ -117,6 +117,7 @@ $('.btn-msg').click(function(){
 });
 
 socket.on('chat', function(msg){
-    $('.message-box-messages > ul').append($('<li><span>' + user + '</span> ').text(msg.msg));
+    console.log(msg.user);
+    $('.message-box-messages > ul').append($('<li>').html('<span>' + msg.user + '</span>: ' + msg.msg));
     $(".message-box-messages").animate({ scrollTop: 9999999999 }, "slow");
 });
