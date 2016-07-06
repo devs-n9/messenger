@@ -48,6 +48,11 @@
     height: 40px;
 }
 
+.message-box-messages small {
+    color: rgba(0, 0, 0, 0.2);
+    font-weight: 800;
+}
+
 #logo {
     height: 40px;
     padding-top: 5px;

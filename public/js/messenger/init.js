@@ -118,6 +118,6 @@ $('.btn-msg').click(function(){
 
 socket.on('chat', function(msg){
     console.log(msg.user);
-    $('.message-box-messages > ul').append($('<li>').html('<span>' + msg.user + '</span>: ' + msg.msg));
+    $('.message-box-messages > ul').append($('<li>').html('<span>' + msg.user + '</span>: ' + msg.msg + '<small class="pull-right">' + msg.created_at + '</small>'));
     $(".message-box-messages").animate({ scrollTop: 9999999999 }, "slow");
 });

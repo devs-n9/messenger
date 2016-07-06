@@ -3,6 +3,6 @@ var messagesScheme = mongoose.Schema({
     name: String,
     msg: String,
     updated_at: Date,
-    created_at: Date
+    created_at: String
 });
 module.exports = mongoose.model('Messages', messagesScheme);

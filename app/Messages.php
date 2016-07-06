@@ -6,5 +6,6 @@ class Messages extends Eloquent {
 
     protected $connection = 'mongodb';
     protected $collection = 'messages';
+    public $timestamps = false;
 
 }

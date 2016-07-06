@@ -49,7 +49,7 @@
         <div class="container-fluid">
             <div class="row message-box-messages">
                 <ul>
-                    <li ng-repeat="msg in msgs"><span>[[ msg.name ]]</span>: [[ msg.msg ]]</li>
+                    <li ng-repeat="msg in msgs"><span>[[ msg.name ]]</span>: [[ msg.msg ]] <small class="pull-right">[[ msg.created_at ]]</small></li>
                 </ul>
             </div>
             <form class="row message-box-form form-horizontal">

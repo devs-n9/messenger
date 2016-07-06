@@ -11,17 +11,19 @@ io.on('connection', function (socket) {
     
     socket.on('message', function(msg){
         console.log('message: ' + msg.msg, msg.user);
-        
+        var date = new Date();
+        var currentDate = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
         var message = new Messages({
             name: msg.user,
-            msg: msg.msg
+            msg: msg.msg,
+            created_at: currentDate
         });
         
         message.save(function(err, message) {
             if (err) return console.error(err);
             console.dir(message);
         });
-        
+        msg.created_at = currentDate;
         io.emit('chat', msg);
     });
     
