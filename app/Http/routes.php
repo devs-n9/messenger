@@ -28,3 +28,9 @@ Route::get('/api/messages/get', 'Api\MessagesController@get');
 
 // API SETTINGS
 Route::patch('/api/settings/avatar', 'Api\SettingsController@avatar');
+
+// API FRIENDS
+Route::get('/api/friends/getusers', 'Api\FriendsController@getUsers'); 
+Route::get('/api/friends/getinvites', 'Api\FriendsController@getInvites'); 
+Route::get('/api/friends/getfriends', 'Api\FriendsController@getFriends'); 
+Route::get('/api/friends/delfriend/{id}', 'Api\FriendsController@deleteFriend'); Route::get('/api/friends/invitefriend/{id}', 'Api\FriendsController@inviteFriend'); Route::get('/api/friends/sendrequest/{id}', 'Api\FriendsController@sendRequest');
