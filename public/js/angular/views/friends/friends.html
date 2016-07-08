@@ -39,7 +39,7 @@
         </li>
     </ul>
     <hr>
-    <ul class="nav nav-sidebar users-list">
+    <ul class="nav nav-sidebar users-list" ng-show="search.name.length > 1" >
         <li ng-repeat="item in usersList | orderBy:'name' | filter:search">
             <div class="row friend-row ">
                 <div class="col-md-12">
