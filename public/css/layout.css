@@ -151,10 +151,62 @@
 .fr-avatar {
     margin-top: 0px;
     padding-bottom: 1px;
-    height: 60px;
-    width: 60px;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    height: 50px;
+    width: 50px;
     margin-left: -20px;
 }
 
+friend-row,
+.well {
+    height: 60px;
+    padding: 0;
+    border: none;
+    margin-right: 10px;
+}
 
+.friend-row {
+    margin: 5px 11px 5px 5px;
+}
 
+.friend-buttons a,
+.well a {
+    text-align: center;
+    
+    font-size: 24px;
+    width: 30px;
+    height: 28px;
+}
+
+.friend-row > div > button > a:hover,
+.well > div > button > a:hover {
+    text-decoration: none;
+    color: #E91E63;
+    z-index: 1000;
+}
+
+.friend-row a:hover,
+.well a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.friend-row a {
+    float: right;
+    margin-top: 16px;
+    cursor: pointer;
+    color: dimgrey;
+}
+
+.users-list {
+    background-color: rgba(188, 214, 216, 1);
+    margin: 0;
+    padding: 10px 15px 0px 15px;
+}
+
+.friend-all {
+    color: dimgrey;
+    padding-left: 10px;
+}
