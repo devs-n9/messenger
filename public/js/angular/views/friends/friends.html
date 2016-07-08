@@ -7,18 +7,13 @@
     <ul class="nav nav-sidebar">
         <li ng-repeat="item in list | orderBy:'name' | filter:search">
             <div class="row friend-row ">
-                <div class="col-md-10">
+                <div class="col-md-12">
                 <img class="fr-avatar" ng-if="item.avatar" src="/img/upload/[[ item.avatar ]]">
                 <img class="fr-avatar" ng-if="!item.avatar" src="/images/avatarblank.jpg"> [[ item.name ]]
-
-                </div>
-                <div class="col-md-2 friend-buttons">
-                    <button type="button">
-                        <a class="icon-send fa fa-envelope-o " ng-click="msg(item.friend_id)" aria-hidden="true"></a>
-                    </button>
-                    <button type="button" data-toggle="collapse" data-target="#collapseExample[[item.friend_id]]" aria-expanded="false" aria-controls="collapseExample">
-                        <a class="icon-delete fa fa-times" aria-hidden="true"></a>
-                    </button>
+<!--                   <a class="icon-delete fa fa-times" aria-hidden="true" data-toggle="collapse" data-target="#collapseExample[[item.friend_id]]" aria-expanded="false" aria-controls="collapseExample"></a>-->
+                   
+                    <a class="icon-send fa fa-envelope-o " ng-click="msg(item.friend_id)" aria-hidden="true"></a>
+                    
                 </div>
             </div>
             <div class="collapse" id="collapseExample[[item.friend_id]]">
@@ -27,12 +22,8 @@
                         <p> Удалить из друзей [[ item.name ]] ?</p>
                     </div>
                     <div class="col-md-2 friend-buttons">
-                        <button type="button" data-toggle="collapse" data-target="#collapseExample[[item.friend_id]]" aria-expanded="false" aria-controls="collapseExample">
-                            <a class="icon-send fa fa-check" ng-click="del(item.friend_id)" aria-hidden="true"></a>
-                        </button>
-                        <button type="button" data-toggle="collapse" data-target="#collapseExample[[item.friend_id]]" aria-expanded="false" aria-controls="collapseExample">
-                            <a class="icon-delete fa fa-times" aria-hidden="true"></a>
-                        </button>
+                        <a data-toggle="collapse" data-target="#collapseExample[[item.friend_id]]" aria-expanded="false" aria-controls="collapseExample" class="icon-send fa fa-check" ng-click="del(item.friend_id)" aria-hidden="true"></a>
+                        <a data-toggle="collapse" data-target="#collapseExample[[item.friend_id]]" aria-expanded="false" aria-controls="collapseExample" class="icon-delete fa fa-times" aria-hidden="true"></a>
                     </div>
                 </div>
             </div>
@@ -46,7 +37,7 @@
                    
                 <img class="fr-avatar" ng-if="item.avatar" src="/img/upload/[[ item.avatar ]]">
                 <img class="fr-avatar" ng-if="!item.avatar" src="/images/avatarblank.jpg">
-                   <span class="friend-all"> [[ item.name ]] <a class="icon-send fa fa-user-plus" ng-click="del(item.user_id)" aria-hidden="true"></a></span>
+                   <span class="friend-all"> [[ item.name ]] <a class="icon-send fa fa-user-plus" ng-click="invite(item.user_id)" aria-hidden="true"></a></span>
                     
                 </div>
             </div>

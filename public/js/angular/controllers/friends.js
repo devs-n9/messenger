@@ -4,17 +4,22 @@ messenger.controller('FriendsController', function($scope, $http) {
     });
 
     $scope.msg = function(msg){
-        console.log("Send message to user: "+msg);
+        console.log("Send message to user: " + msg);
     };
 
-    //$scope.searchUser = function(search){
     $http.get("/api/friends/getusers/").success(function(data){
-            $scope.usersList = data;
+        $scope.usersList = data;
+    });
+    
+    $scope.invite = function(invite_id){
+        console.log("invite " + invite_id);
+        $http.put("/api/friends/invite/" + invite_id, function(result){
+            console.log("invited");
         });
-    // };
+    }
     
     $scope.del = function(delId){
-        $http.get("/api/friends/delfriend/"+delId);
+        $http.get("/api/friends/delfriend/" + delId);
     };
     
 });

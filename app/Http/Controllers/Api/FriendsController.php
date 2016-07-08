@@ -44,6 +44,7 @@ class FriendsController extends Controller
     {
         $friends = new Friends();
         $result = $friends->inviteFriend($id);
+        return response()->json($result);
     }
     
     public function deleteFriend($id)

@@ -31,7 +31,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/api/friends/getusers', 'Api\FriendsController@getUsers'); 
     Route::get('/api/friends/getinvites', 'Api\FriendsController@getInvites'); 
     Route::get('/api/friends/getfriends', 'Api\FriendsController@getFriends'); 
-    Route::get('/api/friends/delfriend/{id}', 'Api\FriendsController@deleteFriend'); Route::get('/api/friends/invitefriend/{id}', 'Api\FriendsController@inviteFriend'); Route::get('/api/friends/sendrequest/{id}', 'Api\FriendsController@sendRequest');
+    Route::get('/api/friends/delfriend/{id}', 'Api\FriendsController@deleteFriend'); Route::put('/api/friends/invite/{id}', 'Api\FriendsController@inviteFriend'); Route::get('/api/friends/sendrequest/{id}', 'Api\FriendsController@sendRequest');
 });
 
 Route::auth();
