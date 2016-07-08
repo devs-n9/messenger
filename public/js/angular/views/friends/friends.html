@@ -7,7 +7,9 @@
     <ul class="nav nav-sidebar">
         <li ng-repeat="item in list | orderBy:'name' | filter:search">
             <div class="row friend-row ">
-                <div class="col-md-10"><img class="fr-avatar" src="/images/no-photo.jpg"> [[ item.name ]]
+                <div class="col-md-10">
+                <img class="fr-avatar" ng-if="item.avatar" src="/img/upload/[[ item.avatar ]]">
+                <img class="fr-avatar" ng-if="!item.avatar" src="/images/avatarblank.jpg"> [[ item.name ]]
 
                 </div>
                 <div class="col-md-2 friend-buttons">
@@ -40,8 +42,11 @@
     <ul class="nav nav-sidebar users-list">
         <li ng-repeat="item in usersList | orderBy:'name' | filter:search">
             <div class="row friend-row ">
-                <div class="col-md-12"><img class="fr-avatar" src="/img/upload/[[ item.avatar ]]">
-                    <span class="friend-all"> [[ item.name ]] <a class="icon-send fa fa-user-plus" ng-click="del(item.user_id)" aria-hidden="true"></a></span>
+                <div class="col-md-12">
+                   
+                <img class="fr-avatar" ng-if="item.avatar" src="/img/upload/[[ item.avatar ]]">
+                <img class="fr-avatar" ng-if="!item.avatar" src="/images/avatarblank.jpg">
+                   <span class="friend-all"> [[ item.name ]] <a class="icon-send fa fa-user-plus" ng-click="del(item.user_id)" aria-hidden="true"></a></span>
                     
                 </div>
             </div>

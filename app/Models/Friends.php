@@ -50,8 +50,10 @@ class Friends extends Model
     public function getUsers()
     {  
         $this->userId = Auth::user()->id;
-        $users = DB::select("SELECT pp.name, pp.user_id FROM profile pp LEFT JOIN 
-        (SELECT p.name, f.user_id as uid FROM profile p JOIN friends f
+        $users = DB::select("SELECT pp.name as profilename, u.name , pp.avatar, pp.user_id FROM profile pp
+        JOIN users u 
+        ON u.id = pp.user_id 
+        LEFT JOIN (SELECT p.name, f.user_id as uid FROM profile p JOIN friends f
         ON p.user_id = f.user_id
         WHERE f.friend_id = ?) as j
         ON j.uid = pp.user_id
