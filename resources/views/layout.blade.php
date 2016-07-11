@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/bower_components/cropperjs/dist/cropper.css">
+    <link rel="stylesheet" href="/bower_components/AngularJS-Toaster/toaster.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/layout.css">
 </head>
@@ -22,6 +23,7 @@
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-route/angular-route.js"></script>
     <script src="/bower_components/cropperjs/dist/cropper.js"></script>
+    <script src="/bower_components/AngularJS-Toaster/toaster.js"></script>
     <script src="/js/angular/app.js"></script>
     <script src="/js/angular/directive.js"></script>
     <script src="/js/angular/controllers/index.js"></script>

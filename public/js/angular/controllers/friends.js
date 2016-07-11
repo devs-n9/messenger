@@ -1,4 +1,4 @@
-messenger.controller('FriendsController', function($scope, $http) {
+messenger.controller('FriendsController', function($scope, $http, toaster) {
     $http.get("/api/friends/getfriends").success(function(data){
         $scope.list = data;
     });
@@ -9,6 +9,14 @@ messenger.controller('FriendsController', function($scope, $http) {
 
     $http.get("/api/friends/getusers/").success(function(data){
         $scope.usersList = data;
+    });
+    
+    $http.get("/api/friends/getinvites").success(function(invites){
+        console.log(invites);
+        invites.forEach(function(i){
+            toaster.pop('success', "friends invite", 'Invite me pls', 5000, '');
+        });
+        
     });
     
     $scope.invite = function(invite_id){

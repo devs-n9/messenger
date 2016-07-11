@@ -1,5 +1,6 @@
 var messenger = angular.module('messenger', [
-    'ngRoute'
+    'ngRoute',
+    'toaster'
 ]).config(function($interpolateProvider){
     $interpolateProvider.startSymbol('[[').endSymbol(']]');
 });
