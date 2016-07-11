@@ -27,7 +27,7 @@ class Friends extends Model
         $friends = DB::table('users')
             ->join('friends', 'users.id', '=', 'friends.user_id')
             ->join('profile', 'friends.friend_id', '=', 'profile.user_id')
-            ->select('friends.friend_id', 'profile.name', 'profile.avatar')
+            ->select('friends.friend_id', 'profile.name as profilename', 'profile.avatar', 'users.name')
             ->where('users.id', '=', $this->userId)
             ->where('friends.status', '=', 1)
             ->get();
