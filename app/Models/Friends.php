@@ -42,7 +42,7 @@ class Friends extends Model
     {
         $this->userId = Auth::user()->id;
         $request = DB::table('friends')
-            ->whereRaw('friend_id = ? AND status = 0', [$this->userId])->get();
+            ->whereRaw('friend_id = ?', [$this->userId])->get();
         return $request;
     }
     /**
