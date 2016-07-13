@@ -64,7 +64,7 @@
         </div>
 
     </div>
-    <toaster-container toaster-options="{'limit':5}"></toaster-container>
+    <toaster-container></toaster-container>
     <!--MODAL-->
     <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
         <div class="modal-dialog" role="document">
