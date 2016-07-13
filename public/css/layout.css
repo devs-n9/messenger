@@ -220,5 +220,5 @@ friend-row,
 }
 
 #toast-container > .toast.toast-info {
-    background: none !important;
+    background-image: none !important;
 }
