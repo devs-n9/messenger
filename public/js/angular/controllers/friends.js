@@ -14,6 +14,7 @@ messenger.controller('FriendsController', function($scope, $http, toaster) {
     $http.get("/api/friends/getinvites").success(function(invites){
         console.log(invites);
         invites.forEach(function(i){
+            console.log(i);
             toaster.pop('success', "friends invite", 'Invite me pls', 5000, '');
         });
         

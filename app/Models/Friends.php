@@ -42,7 +42,10 @@ class Friends extends Model
     {
         $this->userId = Auth::user()->id;
         $request = DB::table('friends')
-            ->whereRaw('friend_id = ?', [$this->userId])->get();
+            ->join('users as u', 'friends.user_id', '=', 'u.id')
+            ->join('profile as p', 'p.user_id', '=', 'u.id')
+            ->whereRaw('friend_id = ?', [$this->userId])
+            ->select('u.name', 'p.avatar')get();
         return $request;
     }
     /**
