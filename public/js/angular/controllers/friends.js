@@ -26,6 +26,10 @@ messenger.controller('FriendsController', function($scope, $http, toaster) {
         
     });
     
+    $scope.addfriend = function(id){
+        console.log("add " + id);
+    }
+    
     $scope.invite = function(invite_id){
         console.log("invite " + invite_id);
         $http.put("/api/friends/invite/" + invite_id, function(result){
@@ -33,8 +37,9 @@ messenger.controller('FriendsController', function($scope, $http, toaster) {
         });
     }
     
-    $scope.delfriend = function(delId){
-        $http.get("/api/friends/delfriend/" + delId);
+    $scope.delfriend = function(id){
+        console.log('del ' + id);
+        $http.get("/api/friends/delfriend/" + id);
     };
     
 });

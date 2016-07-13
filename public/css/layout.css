@@ -219,7 +219,11 @@ friend-row,
     -webkit-border-radius: 40px;
 }
 
-/*
+#toast-container a {
+    margin: 0 7px;
+}
+
+/* 
 #toast-container > .toast.toast-info {
     background-image: none !important;
 }

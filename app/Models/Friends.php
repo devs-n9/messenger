@@ -45,7 +45,7 @@ class Friends extends Model
             ->join('users as u', 'friends.user_id', '=', 'u.id')
             ->join('profile as p', 'p.user_id', '=', 'u.id')
             ->whereRaw('friend_id = ?', [$this->userId])
-            ->select('u.name', 'p.avatar')->get();
+            ->select('u.name', 'p.avatar', 'u.id')->get();
         return $request;
     }
     /**
