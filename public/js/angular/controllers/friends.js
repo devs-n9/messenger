@@ -15,9 +15,13 @@ messenger.controller('FriendsController', function($scope, $http, toaster) {
         console.log(invites);
         invites.forEach(function(i){
             console.log(i);
-            toaster.pop('custom', i.name + " wants to invite you.", 'Please invite me.', 60000);
-            console.log($('#toast-container > .toast.toast-info'));
-            $('#toast-container > .toast.toast-info').css('background-image', 'url(/img/upload/' + i.avatar + ') !important')
+            toaster.pop(
+                'custom', 
+                i.name + " wants to invite you.", 
+                'Please invite me. <a ng-click="addfriend(' + i.id + ')" class="fa fa-check"> </a><a ng-click="delfriend(' + i.id + ')" class="fa fa-times"> </a>', 
+                60000, 
+                'trustedHtml'
+            );
         });
         
     });
@@ -29,7 +33,7 @@ messenger.controller('FriendsController', function($scope, $http, toaster) {
         });
     }
     
-    $scope.del = function(delId){
+    $scope.delfriend = function(delId){
         $http.get("/api/friends/delfriend/" + delId);
     };
     
