@@ -23,6 +23,7 @@
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-route/angular-route.js"></script>
     <script src="/bower_components/cropperjs/dist/cropper.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
     <script src="/bower_components/AngularJS-Toaster/toaster.js"></script>
     <script src="/js/angular/app.js"></script>
     <script src="/js/angular/directive.js"></script>
