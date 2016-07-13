@@ -17,7 +17,7 @@ messenger.controller('FriendsController', function($scope, $http, toaster) {
             console.log(i);
             toaster.pop('custom', i.name + " wants to invite you.", 'Please invite me.', 60000);
             console.log($('#toast-container > .toast.toast-info'));
-            $('#toast-container > .toast.toast-info').css('background-image', 'url(/img/upload/' + i.avatar + ')')
+            $('#toast-container > .toast.toast-info').css('background-image', 'url(/img/upload/' + i.avatar + ') !important')
         });
         
     });
